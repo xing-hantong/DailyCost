@@ -1,7 +1,6 @@
 package me.hantong.dailycost;
 
 import androidx.annotation.NonNull;
-import androidx.databinding.library.baseAdapters.BuildConfig;
 
 import me.drakeet.floo.Chain;
 import me.drakeet.floo.Interceptor;
