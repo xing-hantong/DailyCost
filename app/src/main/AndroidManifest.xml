@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="me.hantong.dailycost">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="me.hantong.dailycost.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="false"
+        android:theme="@style/AppTheme"
+        tools:replace="android:supportsRtl"
+        tools:ignore="LockedOrientationActivity">
+        <activity
+            android:name="me.hantong.dailycost.ui.LauncherActivity"
+            android:theme="@style/AppTheme.Translucent">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="me.hantong.dailycost.ui.home.HomeActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="AppLinkUrlError">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="localhost"
+                    android:path="/home"
+                    android:scheme="@string/scheme" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="me.hantong.dailycost.ui.add.AddRecordActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            tools:ignore="AppLinkUrlError">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="localhost"
+                    android:path="/addRecord"
+                    android:scheme="@string/scheme" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="me.hantong.dailycost.ui.typemanage.TypeManageActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            tools:ignore="AppLinkUrlError">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="localhost"
+                    android:path="/typeManage"
+                    android:scheme="@string/scheme" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="me.hantong.dailycost.ui.typesort.TypeSortActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            tools:ignore="AppLinkUrlError">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="localhost"
+                    android:path="/typeSort"
+                    android:scheme="@string/scheme" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="me.hantong.dailycost.ui.addtype.AddTypeActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            tools:ignore="AppLinkUrlError">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="localhost"
+                    android:path="/addType"
+                    android:scheme="@string/scheme" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="me.hantong.dailycost.ui.statistics.StatisticsActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            tools:ignore="AppLinkUrlError">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="localhost"
+                    android:path="/statistics"
+                    android:scheme="@string/scheme" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="me.hantong.dailycost.ui.typerecords.TypeRecordsActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            tools:ignore="AppLinkUrlError">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="localhost"
+                    android:path="/typeRecords"
+                    android:scheme="@string/scheme" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="me.hantong.dailycost.ui.setting.SettingActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            tools:ignore="AppLinkUrlError">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="localhost"
+                    android:path="/setting"
+                    android:scheme="@string/scheme" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>
