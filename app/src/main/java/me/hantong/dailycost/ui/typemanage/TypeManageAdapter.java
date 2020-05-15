@@ -1,7 +1,7 @@
 package me.hantong.dailycost.ui.typemanage;
 
-import androidx.databinding.ViewDataBinding;
 import androidx.annotation.Nullable;
+import androidx.databinding.ViewDataBinding;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,12 +27,7 @@ public class TypeManageAdapter extends BaseDataBindingAdapter<RecordType> {
     @Override
     protected void convert(DataBindingViewHolder helper, RecordType item) {
         ViewDataBinding binding = helper.getBinding();
-
         binding.setVariable(BR.recordType, item);
-        boolean isLastItem = helper.getAdapterPosition() == mData.size() - 1;
-        // 单位是 dp
-        binding.setVariable(BR.bottomMargin, isLastItem ? 100 : 0);
-
         binding.executePendingBindings();
     }
 

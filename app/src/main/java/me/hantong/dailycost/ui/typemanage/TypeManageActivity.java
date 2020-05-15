@@ -1,17 +1,19 @@
 package me.hantong.dailycost.ui.typemanage;
 
-import androidx.lifecycle.ViewModelProviders;
 import android.os.Bundle;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AlertDialog;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import android.util.Log;
 import android.view.View;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
+import androidx.lifecycle.ViewModelProviders;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import java.util.List;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
+import me.drakeet.floo.Floo;
 import me.hantong.dailycost.Injection;
 import me.hantong.dailycost.R;
 import me.hantong.dailycost.Router;
@@ -21,7 +23,6 @@ import me.hantong.dailycost.databinding.ActivityTypeManageBinding;
 import me.hantong.dailycost.datasource.BackupFailException;
 import me.hantong.dailycost.utill.ToastUtils;
 import me.hantong.dailycost.viewmodel.ViewModelFactory;
-import me.drakeet.floo.Floo;
 
 /**
  * 类型管理

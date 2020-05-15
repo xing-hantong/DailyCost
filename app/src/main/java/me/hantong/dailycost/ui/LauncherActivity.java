@@ -1,11 +1,12 @@
 package me.hantong.dailycost.ui;
 
 import android.os.Bundle;
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import me.hantong.dailycost.Router;
 import me.drakeet.floo.Floo;
+import me.hantong.dailycost.Router;
 
 /**
  * LauncherActivity

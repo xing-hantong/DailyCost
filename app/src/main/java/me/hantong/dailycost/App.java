@@ -3,6 +3,7 @@ package me.hantong.dailycost;
 import android.app.Application;
 
 import androidx.databinding.library.baseAdapters.BuildConfig;
+
 import com.squareup.leakcanary.LeakCanary;
 
 import java.util.HashMap;

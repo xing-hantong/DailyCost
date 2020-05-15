@@ -1,11 +1,12 @@
 package me.hantong.dailycost.ui.typesort;
 
-import androidx.lifecycle.ViewModelProviders;
 import android.os.Bundle;
+import android.util.Log;
+
 import androidx.annotation.Nullable;
+import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.ItemTouchHelper;
-import android.util.Log;
 
 import com.chad.library.adapter.base.callback.ItemDragAndSwipeCallback;
 

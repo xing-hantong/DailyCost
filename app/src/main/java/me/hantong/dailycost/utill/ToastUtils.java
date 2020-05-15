@@ -1,7 +1,8 @@
 package me.hantong.dailycost.utill;
 
-import androidx.annotation.StringRes;
 import android.widget.Toast;
+
+import androidx.annotation.StringRes;
 
 import me.hantong.dailycost.App;
 

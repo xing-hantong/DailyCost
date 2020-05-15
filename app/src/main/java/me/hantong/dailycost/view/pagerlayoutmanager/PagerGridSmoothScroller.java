@@ -1,10 +1,11 @@
 package me.hantong.dailycost.view.pagerlayoutmanager;
 
+import android.util.DisplayMetrics;
+import android.view.View;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearSmoothScroller;
 import androidx.recyclerview.widget.RecyclerView;
-import android.util.DisplayMetrics;
-import android.view.View;
 
 import static me.hantong.dailycost.view.pagerlayoutmanager.PagerConfig.Logi;
 

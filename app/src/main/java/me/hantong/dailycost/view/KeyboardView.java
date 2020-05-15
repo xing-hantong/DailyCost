@@ -3,8 +3,6 @@ package me.hantong.dailycost.view;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
-import androidx.databinding.DataBindingUtil;
-import androidx.annotation.Nullable;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
@@ -16,10 +14,13 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
+import androidx.databinding.DataBindingUtil;
+
 import me.hantong.dailycost.App;
 import me.hantong.dailycost.R;
 import me.hantong.dailycost.databinding.LayoutKeyboardBinding;
-import me.hantong.dailycost.utill.SoftInputUtils;
+
 
 /**
  * 自定义键盘
@@ -67,7 +68,6 @@ public class KeyboardView extends LinearLayout {
     public void setText(String text) {
         mBinding.editInput.setText(text);
         mBinding.editInput.setSelection(mBinding.editInput.getText().length());
-        SoftInputUtils.hideSoftInput(mBinding.editInput);
         if (!mBinding.editInput.isFocused()) {
             mBinding.editInput.requestFocus();
         }
@@ -79,14 +79,12 @@ public class KeyboardView extends LinearLayout {
 
     @SuppressLint("ClickableViewAccessibility")
     private void init(Context context) {
-        // 当前 activity 打开时不弹出软键盘
         Activity activity = (Activity) context;
         activity.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
         setOrientation(VERTICAL);
         mBinding = DataBindingUtil.inflate(LayoutInflater.from(context), R.layout.layout_keyboard, this, true);
         mBinding.editInput.requestFocus();
         mBinding.editInput.setOnTouchListener((v, event) -> {
-            SoftInputUtils.hideSoftInput(mBinding.editInput);
             mBinding.editInput.requestFocus();
             // 返回 true，拦截了默认的点击和长按操作，这是一个妥协的做法
             // 不再考虑多选粘贴的情况

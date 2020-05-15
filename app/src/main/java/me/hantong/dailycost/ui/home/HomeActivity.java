@@ -1,20 +1,23 @@
 package me.hantong.dailycost.ui.home;
 
 import android.Manifest;
-import androidx.lifecycle.ViewModelProviders;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
+import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
-import android.util.Log;
-import android.view.View;
 
 import java.util.List;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
+import me.drakeet.floo.Floo;
+import me.drakeet.floo.StackCallback;
 import me.hantong.dailycost.ConfigManager;
 import me.hantong.dailycost.Injection;
 import me.hantong.dailycost.R;
@@ -28,8 +31,6 @@ import me.hantong.dailycost.datasource.BackupFailException;
 import me.hantong.dailycost.utill.BigDecimalUtil;
 import me.hantong.dailycost.utill.ToastUtils;
 import me.hantong.dailycost.viewmodel.ViewModelFactory;
-import me.drakeet.floo.Floo;
-import me.drakeet.floo.StackCallback;
 import pub.devrel.easypermissions.AppSettingsDialog;
 import pub.devrel.easypermissions.EasyPermissions;
 import pub.devrel.easypermissions.PermissionRequest;

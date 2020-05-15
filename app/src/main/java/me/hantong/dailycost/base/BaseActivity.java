@@ -2,14 +2,15 @@ package me.hantong.dailycost.base;
 
 import android.content.res.Configuration;
 import android.content.res.Resources;
-import androidx.databinding.DataBindingUtil;
-import androidx.databinding.ViewDataBinding;
 import android.os.Bundle;
+import android.view.View;
+import android.view.ViewGroup;
+
 import androidx.annotation.LayoutRes;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import android.view.View;
-import android.view.ViewGroup;
+import androidx.databinding.DataBindingUtil;
+import androidx.databinding.ViewDataBinding;
 
 import io.reactivex.disposables.CompositeDisposable;
 import me.hantong.dailycost.utill.StatusBarUtil;

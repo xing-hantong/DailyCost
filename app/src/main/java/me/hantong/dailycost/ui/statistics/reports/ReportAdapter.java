@@ -1,7 +1,7 @@
 package me.hantong.dailycost.ui.statistics.reports;
 
-import androidx.databinding.ViewDataBinding;
 import androidx.annotation.Nullable;
+import androidx.databinding.ViewDataBinding;
 
 import java.util.List;
 

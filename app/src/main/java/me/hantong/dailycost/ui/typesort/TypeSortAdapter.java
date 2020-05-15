@@ -1,7 +1,7 @@
 package me.hantong.dailycost.ui.typesort;
 
-import androidx.databinding.ViewDataBinding;
 import androidx.annotation.Nullable;
+import androidx.databinding.ViewDataBinding;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.chad.library.adapter.base.BaseViewHolder;

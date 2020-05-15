@@ -1,18 +1,17 @@
 package me.hantong.dailycost.binding;
 
 import android.content.Context;
-import androidx.databinding.BindingAdapter;
 import android.text.TextUtils;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.databinding.BindingAdapter;
 
 import java.math.BigDecimal;
 
 import me.hantong.dailycost.R;
 import me.hantong.dailycost.utill.BigDecimalUtil;
-import me.hantong.dailycost.utill.SizeUtils;
 
 /**
  * binding 属性适配器（自动被 DataBinding 引用）
@@ -24,18 +23,6 @@ public class BindAdapter {
     @BindingAdapter("android:visibility")
     public static void showHide(View view, boolean show) {
         view.setVisibility(show ? View.VISIBLE : View.GONE);
-    }
-
-    @BindingAdapter("custom_margin_bottom")
-    public static void setMarginBottom(View view, int bottomMargin) {
-        ViewGroup.LayoutParams layoutParams = view.getLayoutParams();
-        ViewGroup.MarginLayoutParams marginParams;
-        if (layoutParams instanceof ViewGroup.MarginLayoutParams) {
-            marginParams = (ViewGroup.MarginLayoutParams) layoutParams;
-        } else {
-            marginParams = new ViewGroup.MarginLayoutParams(layoutParams);
-        }
-        marginParams.bottomMargin = SizeUtils.dp2px(bottomMargin);
     }
 
     @BindingAdapter("text_check_null")

@@ -8,10 +8,6 @@
     <data>
 
         <variable
-            name="bottomMargin"
-            type="int" />
-
-        <variable
             name="recordType"
             type="me.hantong.dailycost.database.entity.RecordType" />
     </data>
@@ -24,7 +20,6 @@
         android:foreground="?attr/selectableItemBackground"
         android:gravity="center_vertical"
         android:padding="15dp"
-        app:custom_margin_bottom="@{bottomMargin}"
         tools:background="@color/colorPrimary">
 
         <ImageView

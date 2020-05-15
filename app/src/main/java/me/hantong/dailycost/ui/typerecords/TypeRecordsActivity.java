@@ -1,6 +1,7 @@
 package me.hantong.dailycost.ui.typerecords;
 
 import android.os.Bundle;
+
 import androidx.annotation.Nullable;
 
 import me.hantong.dailycost.R;

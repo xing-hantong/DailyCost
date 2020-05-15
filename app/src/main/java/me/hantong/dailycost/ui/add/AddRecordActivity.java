@@ -1,10 +1,11 @@
 package me.hantong.dailycost.ui.add;
 
-import androidx.lifecycle.ViewModelProviders;
 import android.os.Bundle;
-import androidx.annotation.Nullable;
 import android.util.Log;
 import android.view.View;
+
+import androidx.annotation.Nullable;
+import androidx.lifecycle.ViewModelProviders;
 
 import com.wdullaer.materialdatetimepicker.date.DatePickerDialog;
 
@@ -24,7 +25,6 @@ import me.hantong.dailycost.databinding.ActivityAddRecordBinding;
 import me.hantong.dailycost.datasource.BackupFailException;
 import me.hantong.dailycost.utill.BigDecimalUtil;
 import me.hantong.dailycost.utill.DateUtils;
-import me.hantong.dailycost.utill.SoftInputUtils;
 import me.hantong.dailycost.utill.ToastUtils;
 import me.hantong.dailycost.viewmodel.ViewModelFactory;
 
@@ -75,7 +75,6 @@ public class AddRecordActivity extends BaseActivity {
         mBinding.titleBar.ibtClose.setOnClickListener(v -> finish());
 
         mBinding.edtRemark.setOnEditorActionListener((v, actionId, event) -> {
-            SoftInputUtils.hideSoftInput(mBinding.typePageOutlay);
             mBinding.keyboard.setEditTextFocus();
             return false;
         });

@@ -3,14 +3,15 @@ package me.hantong.dailycost.view.pagerlayoutmanager;
 import android.annotation.SuppressLint;
 import android.graphics.PointF;
 import android.graphics.Rect;
-import androidx.annotation.IntDef;
-import androidx.annotation.IntRange;
-import androidx.recyclerview.widget.LinearSmoothScroller;
-import androidx.recyclerview.widget.RecyclerView;
 import android.util.Log;
 import android.util.SparseArray;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.annotation.IntDef;
+import androidx.annotation.IntRange;
+import androidx.recyclerview.widget.LinearSmoothScroller;
+import androidx.recyclerview.widget.RecyclerView;
 
 import static androidx.recyclerview.widget.RecyclerView.SCROLL_STATE_IDLE;
 import static me.hantong.dailycost.view.pagerlayoutmanager.PagerConfig.Loge;

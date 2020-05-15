@@ -2,8 +2,9 @@ package me.hantong.dailycost.utill;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import androidx.annotation.NonNull;
 import android.text.TextUtils;
+
+import androidx.annotation.NonNull;
 
 import me.hantong.dailycost.App;
 import me.hantong.dailycost.database.AppDatabase;

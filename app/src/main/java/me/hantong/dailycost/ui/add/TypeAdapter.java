@@ -1,18 +1,18 @@
 package me.hantong.dailycost.ui.add;
 
-import androidx.databinding.ViewDataBinding;
 import androidx.annotation.Nullable;
+import androidx.databinding.ViewDataBinding;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import me.drakeet.floo.Floo;
 import me.hantong.dailycost.App;
 import me.hantong.dailycost.BR;
 import me.hantong.dailycost.R;
 import me.hantong.dailycost.Router;
 import me.hantong.dailycost.base.BaseDataBindingAdapter;
 import me.hantong.dailycost.database.entity.RecordType;
-import me.drakeet.floo.Floo;
 
 /**
  * TypeAdapter

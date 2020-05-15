@@ -1,27 +1,28 @@
 package me.hantong.dailycost.ui.setting;
 
 import android.Manifest;
-import androidx.lifecycle.ViewModelProviders;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
+import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
-import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
+import me.drakeet.floo.Floo;
 import me.hantong.dailycost.ConfigManager;
 import me.hantong.dailycost.R;
 import me.hantong.dailycost.Router;
 import me.hantong.dailycost.base.BaseActivity;
 import me.hantong.dailycost.databinding.ActivitySettingBinding;
 import me.hantong.dailycost.utill.ToastUtils;
-import me.drakeet.floo.Floo;
 import pub.devrel.easypermissions.AppSettingsDialog;
 import pub.devrel.easypermissions.EasyPermissions;
 import pub.devrel.easypermissions.PermissionRequest;

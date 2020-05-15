@@ -1,8 +1,8 @@
 package me.hantong.dailycost.viewmodel;
 
+import androidx.annotation.NonNull;
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.annotation.NonNull;
 
 import me.hantong.dailycost.datasource.AppDataSource;
 import me.hantong.dailycost.ui.add.AddRecordViewModel;

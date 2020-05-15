@@ -1,13 +1,14 @@
 package me.hantong.dailycost.view;
 
 import android.content.Context;
-import androidx.databinding.DataBindingUtil;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AlertDialog;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
+import androidx.databinding.DataBindingUtil;
 
 import java.util.List;
 
