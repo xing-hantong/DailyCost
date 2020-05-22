@@ -74,8 +74,8 @@ public class SettingActivity extends BaseActivity implements EasyPermissions.Per
         list.add(new SettingSectionEntity(new SettingSectionEntity.Item(getString(R.string.text_setting_restore), getString(R.string.text_setting_restore_content))));
         list.add(new SettingSectionEntity(new SettingSectionEntity.Item(getString(R.string.text_setting_auto_backup), getString(R.string.text_setting_auto_backup_content), ConfigManager.isAutoBackup())));
 
-//        list.add(new SettingSectionEntity(getString(R.string.text_setting_about_and_help)));
-//        list.add(new SettingSectionEntity(new SettingSectionEntity.Item(getString(R.string.text_about), getString(R.string.text_about_content))));
+        list.add(new SettingSectionEntity(getString(R.string.text_setting_about_and_help)));
+        list.add(new SettingSectionEntity(new SettingSectionEntity.Item(getString(R.string.text_about), getString(R.string.text_about_content))));
 //        list.add(new SettingSectionEntity(new SettingSectionEntity.Item(getString(R.string.text_setting_score), getString(R.string.text_setting_good_score) + "\uD83D\uDE18")));
 //        list.add(new SettingSectionEntity(new SettingSectionEntity.Item(getString(R.string.text_setting_donate), "")));
 //        list.add(new SettingSectionEntity(new SettingSectionEntity.Item(getString(R.string.text_setting_lisence))));
@@ -93,6 +93,9 @@ public class SettingActivity extends BaseActivity implements EasyPermissions.Per
                     break;
                 case 4:
                     showRestoreDialog();
+                    break;
+                case 7:
+                    goOpenSource();
                     break;
                 default:
                     break;
@@ -258,6 +261,11 @@ public class SettingActivity extends BaseActivity implements EasyPermissions.Per
 
     private void goTypeManage() {
         Floo.navigation(this, Router.Url.URL_TYPE_MANAGE)
+                .start();
+    }
+
+    private void goOpenSource() {
+        Floo.navigation(this, Router.Url.URL_OPEN_SOURCE)
                 .start();
     }
 

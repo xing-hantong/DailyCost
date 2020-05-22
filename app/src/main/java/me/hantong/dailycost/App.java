@@ -46,6 +46,7 @@ public class App extends Application {
         mappings.put(Router.Url.URL_SETTING, new Target("mk://localhost/setting"));
         mappings.put(Router.Url.URL_OPEN_SOURCE, new Target("mk://localhost/openSource"));
         mappings.put(Router.Url.URL_ABOUT, new Target("mk://localhost/about"));
+        mappings.put(Router.Url.URL_OPEN_SOURCE, new Target("mk://localhost/openSource"));
 
         Floo.configuration()
                 .setDebugEnabled(BuildConfig.DEBUG)

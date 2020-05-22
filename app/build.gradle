@@ -52,7 +52,7 @@ android {
             applicationIdSuffix ".debug"
             resValue "string", "scheme", "mk-debug"
             // 只会给 res/values/string.xml 增加，不会影响其他 values 文件夹
-            resValue "string", "app_name", "那样记账debug"
+            resValue "string", "app_name", "记账"
         }
         release {
             // 签名
