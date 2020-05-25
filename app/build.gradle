@@ -1,6 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'AndResGuard'
-
+apply plugin: 'com.google.gms.google-services'
 
 // 加载 keystore.properties 文件
 def keystorePropertiesFile = rootProject.file("keystore.properties")
@@ -52,13 +52,13 @@ android {
             applicationIdSuffix ".debug"
             resValue "string", "scheme", "mk-debug"
             // 只会给 res/values/string.xml 增加，不会影响其他 values 文件夹
-            resValue "string", "app_name", "记账"
+            resValue "string", "app_name", "DailyCost"
         }
         release {
             // 签名
             signingConfig signingConfigs.release
             resValue "string", "scheme", "mk"
-            resValue "string", "app_name", "那样记账"
+            resValue "string", "app_name", "DailyCost"
             // Zipalign优化
             zipAlignEnabled true
             // 移除无用的resource文件
@@ -158,9 +158,6 @@ dependencies {
     implementation deps.datetimepicker
     // 图表
     implementation deps.MPChart
-    // 内存泄漏检测
-    debugImplementation deps.leakcanary_debug
-    releaseImplementation deps.leakcanary_release
     // 动态权限申请
     implementation deps.permission
     // 保存文件
@@ -169,4 +166,6 @@ dependencies {
     implementation deps.prettytime
     // 圆形 ImageView
     implementation deps.circleimageview
+    // Google Firebase
+    implementation 'com.google.firebase:firebase-analytics:17.2.2'
 }

@@ -22,7 +22,6 @@ import me.hantong.dailycost.R;
 
 public class MonthYearPickerDialog extends DialogFragment {
 
-    private static final int MAX_YEAR = 2049;
     private DatePickerDialog.OnDateSetListener listener;
 
     public void setListener(DatePickerDialog.OnDateSetListener listener) {
@@ -43,8 +42,8 @@ public class MonthYearPickerDialog extends DialogFragment {
         Calendar cal = Calendar.getInstance();
 
         View dialog = inflater.inflate(R.layout.layout_month_year_picker_dialog, null);
-        final NumberPicker monthPicker = (NumberPicker) dialog.findViewById(R.id.picker_month);
-        final NumberPicker yearPicker = (NumberPicker) dialog.findViewById(R.id.picker_year);
+        final NumberPicker monthPicker = dialog.findViewById(R.id.picker_month);
+        final NumberPicker yearPicker = dialog.findViewById(R.id.picker_year);
 
         monthPicker.setMinValue(1);
         monthPicker.setMaxValue(12);

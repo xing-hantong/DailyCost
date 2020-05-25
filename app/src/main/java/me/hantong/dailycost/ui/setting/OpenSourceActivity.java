@@ -58,9 +58,6 @@ public class OpenSourceActivity extends BaseActivity {
         OpenSourceBean rxAndroid = new OpenSourceBean("RxAndroid - ReactiveX",
                 "https://github.com/ReactiveX/rxAndroid",
                 "Apache Software License 2.0");
-        OpenSourceBean leakcanary = new OpenSourceBean("leakcanary - square",
-                "https://github.com/square/leakcanary",
-                "Apache Software License 2.0");
         OpenSourceBean BRVAH = new OpenSourceBean("BRVAH - CymChad",
                 "https://github.com/CymChad/BaseRecyclerViewAdapterHelper",
                 "Apache Software License 2.0");
@@ -97,7 +94,6 @@ public class OpenSourceActivity extends BaseActivity {
         list.add(room);
         list.add(rxJava);
         list.add(rxAndroid);
-        list.add(leakcanary);
         list.add(BRVAH);
         list.add(chart);
         list.add(floo);

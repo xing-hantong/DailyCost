@@ -19,7 +19,6 @@ public class NotPagingViewPager extends ViewPager {
         if (this.enabled) {
             return super.onTouchEvent(event);
         }
-
         return false;
     }
 
@@ -28,16 +27,7 @@ public class NotPagingViewPager extends ViewPager {
         if (this.enabled) {
             return super.onInterceptTouchEvent(event);
         }
-
         return false;
     }
 
-    /**
-     * Enable or disable the swipe navigation
-     *
-     * @param enabled
-     */
-    public void setPagingEnabled(boolean enabled) {
-        this.enabled = enabled;
-    }
 }

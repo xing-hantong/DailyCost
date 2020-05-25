@@ -26,9 +26,6 @@ public class StatisticsActivity extends BaseActivity {
     private ActivityStatisticsBinding mBinding;
     private BillFragment mBillFragment;
     private ReportsFragment mReportsFragment;
-    private int mCurrentYear = DateUtils.getCurrentYear();
-    private int mCurrentMonth = DateUtils.getCurrentMonth();
-    private int mCurrentDate = 0;
 
     @Override
     protected int getLayoutId() {
@@ -80,9 +77,6 @@ public class StatisticsActivity extends BaseActivity {
         pickerDialog.setListener(new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                mCurrentYear = year;
-                mCurrentMonth = month;
-                mCurrentDate = dayOfMonth;
                 String title = DateUtils.getYearMonthFormatString(year, month);
                 mBinding.titleBar.setTitle(title);
                 mBillFragment.setYearMonth(year, month);

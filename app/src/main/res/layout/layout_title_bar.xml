@@ -5,11 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <variable
             name="title"
             type="String" />
-
     </data>
 
     <RelativeLayout
@@ -23,14 +21,14 @@
         android:paddingTop="12dp"
         tools:background="@color/colorPrimary">
 
-        <me.hantong.dailycost.view.QMUIAlphaImageButton
+        <ImageButton
             android:id="@+id/ibt_close"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/ic_back"
             android:contentDescription="@string/content_des_close" />
 
-        <me.hantong.dailycost.view.QMUIAlphaLinearLayout
+        <LinearLayout
             android:id="@+id/ll_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -40,7 +38,7 @@
             android:gravity="center_vertical"
             android:paddingEnd="5dp"
             android:paddingStart="5dp">
-
+            
             <TextView
                 android:id="@+id/tv_title"
                 android:layout_width="wrap_content"
@@ -57,11 +55,11 @@
                 android:layout_height="10dp"
                 android:layout_marginStart="5dp"
                 android:src="@drawable/ic_arrow_down"
-                android:visibility="gone" />
-        </me.hantong.dailycost.view.QMUIAlphaLinearLayout>
+                android:visibility="gone"
+                android:contentDescription="title" />
+        </LinearLayout>
 
-
-        <me.hantong.dailycost.view.QMUIAlphaTextView
+        <TextView
             android:id="@+id/tv_right"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -17,8 +17,6 @@ import me.hantong.dailycost.database.entity.RecordType;
 import me.hantong.dailycost.database.entity.RecordWithType;
 import me.hantong.dailycost.databinding.LayoutTypePageBinding;
 import me.hantong.dailycost.ui.add.TypeAdapter;
-import me.hantong.dailycost.view.pagerlayoutmanager.PagerGridLayoutManager;
-import me.hantong.dailycost.view.pagerlayoutmanager.PagerGridSnapHelper;
 
 /**
  * 翻页的 recyclerView + 指示器
@@ -56,11 +54,6 @@ public class TypePageView extends LinearLayout {
         mLayoutManager = new PagerGridLayoutManager(
                 ROW, COLUMN, PagerGridLayoutManager.HORIZONTAL);
         mBinding.recyclerView.setLayoutManager(mLayoutManager);
-
-        // 2.设置滚动辅助工具
-        PagerGridSnapHelper pageSnapHelper = new PagerGridSnapHelper();
-        pageSnapHelper.attachToRecyclerView(mBinding.recyclerView);
-
 
         mAdapter = new TypeAdapter(null);
         mAdapter.setOnItemClickListener((adapter, view, position) -> {

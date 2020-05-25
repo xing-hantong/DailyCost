@@ -3,9 +3,6 @@ package me.hantong.dailycost;
 import android.app.Application;
 
 import androidx.databinding.library.baseAdapters.BuildConfig;
-
-import com.squareup.leakcanary.LeakCanary;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -27,13 +24,6 @@ public class App extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        if (LeakCanary.isInAnalyzerProcess(this)) {
-            // This process is dedicated to LeakCanary for heap analysis.
-            // You should not init your app in this process.
-            return;
-        }
-        LeakCanary.install(this);
-        // Normal app init code...
         INSTANCE = this;
         Map<String, Target> mappings = new HashMap<>(8);
         mappings.put(Router.Url.URL_HOME, new Target("mk://localhost/home"));
