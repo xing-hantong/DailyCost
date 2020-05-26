@@ -19,6 +19,7 @@ import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
 import com.github.mikephil.charting.utils.ColorTemplate;
 
 import java.util.List;
+import java.util.Objects;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
@@ -31,6 +32,7 @@ import me.hantong.dailycost.database.entity.RecordType;
 import me.hantong.dailycost.database.entity.SumMoneyBean;
 import me.hantong.dailycost.database.entity.TypeSumMoneyBean;
 import me.hantong.dailycost.databinding.FragmentReportsBinding;
+import me.hantong.dailycost.ui.statistics.StatisticsActivity;
 import me.hantong.dailycost.utill.BigDecimalUtil;
 import me.hantong.dailycost.utill.DateUtils;
 import me.hantong.dailycost.utill.ToastUtils;
@@ -51,6 +53,9 @@ public class ReportsFragment extends BaseFragment {
     public int mYear;
     public int mMonth;
     public int mType;
+
+
+    public FragmentReportsBinding getmBinding() { return mBinding;}
 
     @Override
     protected int getLayoutId() {
@@ -81,15 +86,25 @@ public class ReportsFragment extends BaseFragment {
 
         initPieChart();
 
+        StatisticsActivity parentActivity = ((StatisticsActivity) Objects.requireNonNull(getActivity()));
         mBinding.rgType.setOnCheckedChangeListener((group, checkedId) -> {
             if (checkedId == R.id.rb_outlay) {
                 mType = RecordType.TYPE_OUTLAY;
+                if (mBinding.rbOutlay.isPressed()) {
+                    parentActivity.getmBillFragment().getmBinding().rgType.check(R.id.rb_outlay);
+                }
             } else {
                 mType = RecordType.TYPE_INCOME;
+                if (mBinding.rbIncome.isPressed()) {
+                    parentActivity.getmBillFragment().getmBinding().rgType.check(R.id.rb_income);
+                }
             }
+
             getTypeSumMoney();
             getMonthSumMoney();
         });
+
+
     }
 
     private void navTypeRecords(String typeName, int typeId) {

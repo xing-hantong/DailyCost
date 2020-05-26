@@ -17,6 +17,7 @@ import com.github.mikephil.charting.interfaces.datasets.IBarDataSet;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
@@ -32,6 +33,7 @@ import me.hantong.dailycost.database.entity.SumMoneyBean;
 import me.hantong.dailycost.databinding.FragmentBillBinding;
 import me.hantong.dailycost.datasource.BackupFailException;
 import me.hantong.dailycost.ui.home.HomeAdapter;
+import me.hantong.dailycost.ui.statistics.StatisticsActivity;
 import me.hantong.dailycost.utill.BigDecimalUtil;
 import me.hantong.dailycost.utill.DateUtils;
 import me.hantong.dailycost.utill.ToastUtils;
@@ -53,6 +55,9 @@ public class BillFragment extends BaseFragment {
     public int mYear;
     public int mMonth;
     public int mType;
+
+
+    public FragmentBillBinding getmBinding() { return mBinding;}
 
     @Override
     protected int getLayoutId() {
@@ -83,17 +88,26 @@ public class BillFragment extends BaseFragment {
 
         initBarChart();
 
+        StatisticsActivity parentActivity = ((StatisticsActivity) Objects.requireNonNull(getActivity()));
         mBinding.rgType.setOnCheckedChangeListener((group, checkedId) -> {
             if (checkedId == R.id.rb_outlay) {
                 mType = RecordType.TYPE_OUTLAY;
+                if (mBinding.rbOutlay.isPressed()) {
+                    parentActivity.getmReportsFragment().getmBinding().rgType.check(R.id.rb_outlay);
+                }
             } else {
                 mType = RecordType.TYPE_INCOME;
+                if (mBinding.rbIncome.isPressed()) {
+                    parentActivity.getmReportsFragment().getmBinding().rgType.check(R.id.rb_income);
+                }
             }
             getOrderData();
             getDaySumData();
             getMonthSumMoney();
         });
     }
+
+
 
     private void initBarChart() {
         mBinding.barChart.setNoDataText("");

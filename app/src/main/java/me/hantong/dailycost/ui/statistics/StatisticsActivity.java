@@ -27,6 +27,10 @@ public class StatisticsActivity extends BaseActivity {
     private BillFragment mBillFragment;
     private ReportsFragment mReportsFragment;
 
+    public BillFragment getmBillFragment() { return mBillFragment;}
+
+    public ReportsFragment getmReportsFragment() { return mReportsFragment;}
+
     @Override
     protected int getLayoutId() {
         return R.layout.activity_statistics;
