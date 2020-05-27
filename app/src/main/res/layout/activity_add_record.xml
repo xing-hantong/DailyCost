@@ -74,7 +74,6 @@
                     android:background="@drawable/bg_date"
                     android:hint="@string/hint_enter_remark"
                     android:imeOptions="actionDone"
-                    android:maxLength="9"
                     android:paddingBottom="3dp"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
