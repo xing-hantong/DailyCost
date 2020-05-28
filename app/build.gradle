@@ -22,6 +22,7 @@ android {
                 arguments = ["room.schemaLocation": "$projectDir/schemas".toString()]
             }
         }
+        resConfigs "en"
     }
     dataBinding {
         enabled = true
@@ -51,8 +52,6 @@ android {
             versionNameSuffix ".debug"
             applicationIdSuffix ".debug"
             resValue "string", "scheme", "mk-debug"
-            // 只会给 res/values/string.xml 增加，不会影响其他 values 文件夹
-            resValue "string", "app_name", "DailyCost"
         }
         release {
             // 签名
@@ -167,5 +166,13 @@ dependencies {
     // 圆形 ImageView
     implementation deps.circleimageview
     // Google Firebase
-    implementation 'com.google.firebase:firebase-analytics:17.2.2'
+    implementation 'com.google.firebase:firebase-analytics:17.4.2'
+    // FirebaseUI
+    implementation 'com.firebaseui:firebase-ui-auth:6.2.1'
+    // Facebook Login
+    implementation 'com.facebook.android:facebook-login:5.0.0'
+    // ButterKnife
+    implementation 'com.jakewharton:butterknife:10.2.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
+
 }

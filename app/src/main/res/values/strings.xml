@@ -1,5 +1,5 @@
 <resources>
-<!--    <string name="app_name">DailyCost</string>-->
+    <string name="app_name">DailyCost</string>
 
     <string name="ok">Ok</string>
     <string name="cancel">Cancel</string>
@@ -130,4 +130,114 @@
     <string name="text_icon_launcher">Want a designer to design an application launch icon</string>
     <string name="text_share_to">Share to</string>
     <string name="text_app_slogan">Simple, pure accounting application</string>
+
+    <!-- Facebook application ID and custom URL scheme (app ID prefixed by 'fb'). -->
+    <string name="facebook_application_id" translatable="false">584173995540366</string>
+    <string name="facebook_login_protocol_scheme" translatable="false">fb584173995540366</string>
+
+    <string name="sign_in">Sign In</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="signed_out">Signed Out</string>
+    <string name="desc_firebase_lockup">Firebase logo and name</string>
+    <string name="firebaseui_status_fmt">Firebase User: %s</string>
+
+    <string name="generic_title_text">OAuth Sign In</string>
+    <string name="generic_signin_fmt">Sign In with %s</string>
+    <string name="generic_status_fmt">User: %s (%s)</string>
+    <string name="generic_label_provider">Provider:</string>
+
+    <string name="id_fmt">User ID: %s</string>
+    <string name="email_fmt">Email: %s</string>
+
+    <string name="enroll_mfa">Enroll MFA</string>
+    <string name="unenroll_mfa">Unenroll MFA</string>
+    <string name="reload">Reload</string>
+
+    <string name="desc_firebase_ui">Use the FirebaseUI-Android library to authenticate with Firebase.</string>
+
+    <!-- Auth UI -->
+    <string name="launch_title">FirebaseUI Auth</string>
+    <string name="sign_in_start">Start</string>
+    <string name="sign_in_silent">Sign in silently</string>
+
+    <string name="providers_header">Auth providers</string>
+    <string name="providers_google">Google</string>
+    <string name="providers_facebook">Facebook</string>
+    <string name="providers_twitter">Twitter</string>
+    <string name="providers_email">Email</string>
+    <string name="providers_email_link">Email link</string>
+    <string name="providers_phone">Phone</string>
+    <string name="providers_anonymous">Anonymous</string>
+    <string name="providers_apple">Apple</string>
+    <string name="providers_microsoft">Microsoft</string>
+    <string name="providers_yahoo">Yahoo</string>
+    <string name="providers_github">GitHub</string>
+
+    <string name="layout_header">Layout</string>
+    <string name="layout_default">Default</string>
+    <string name="layout_custom">Custom</string>
+
+    <string name="theme_header">Theme</string>
+    <string name="theme_default">Default theme</string>
+    <string name="theme_purple">Purple Theme</string>
+    <string name="theme_green">Green Theme</string>
+    <string name="theme_dark">Dark Theme</string>
+
+    <string name="logo_header">Logo</string>
+    <string name="logo_firebase">Firebase Auth</string>
+    <string name="logo_google">Google</string>
+    <string name="logo_none">None</string>
+
+    <string name="tos_pp_header">Terms of Service and Privacy Policy</string>
+    <string name="tos_pp_google">Google</string>
+    <string name="tos_pp_firebase">Firebase</string>
+    <string name="tos_pp_none">None</string>
+
+    <string name="google_scopes_header">Example extra Google scopes</string>
+    <string name="google_scope_drive_file">Drive File</string>
+    <string name="google_scope_youtube_data">Youtube data</string>
+
+    <string name="facebook_permissions_header">Example extra Facebook permissions</string>
+    <string name="facebook_permission_friends">Friends</string>
+    <string name="facebook_permission_photos">Photos</string>
+
+    <string name="options_header">Other Options</string>
+    <string name="options_enable_credential_selector">Enable Smart Lock\'s credential selector</string>
+    <string name="options_enable_hint_selector">Enable Smart Lock\'s hint selector</string>
+    <string name="options_allow_new_email_acccount">Allow new account creation</string>
+    <string name="options_require_name">Require first/last name with email accounts.</string>
+
+    <string name="configuration_required">Configuration required - see README.md</string>
+    <string name="google_label_missing_config">Google configuration missing</string>
+    <string name="facebook_label_missing_config">Facebook configuration missing</string>
+
+    <string name="sign_in_cancelled">Sign in cancelled</string>
+    <string name="no_internet_connection">No internet connection</string>
+    <string name="account_disabled">Account is disabled by the administrator</string>
+    <string name="unknown_error">An unknown error occurred</string>
+
+    <string name="title_anonymous_upgrade">FirebaseUI Anonymous Account Linking</string>
+    <string name="anonymous_sign_in">Anonymous Sign In</string>
+    <string name="launch_auth_ui">Launch Auth UI</string>
+    <string name="resolve_merge_conflict">Resolve Merge Conflict</string>
+
+    <!-- Auth UI - Signed in -->
+    <string name="signed_in_header">You are signed in!</string>
+    <string name="delete_account_label">Delete account</string>
+
+    <string name="sign_in_failed">Sign in failed</string>
+    <string name="sign_out_failed">Sign out failed</string>
+    <string name="delete_account_failed">Delete account failed</string>
+
+    <string name="user_profile_header">User profile:</string>
+    <string name="profile_picture_content_desc">Profile picture</string>
+    <string name="used_providers">Providers used: %s</string>
+    <string name="idp_token">IDP Token</string>
+    <string name="idp_secret">IDP Secret</string>
+
+    <!-- Auth UI - Custom AuthMethodPickerLayout -->
+    <string name="custom_layout_subheader">Sign in using this nice custom layout!</string>
+    <string name="custom_layout_idp_header">Choose a provider</string>
+    <string name="custom_layout_email_header">Use your email</string>
+    <string name="custom_layout_email_click_text">Continue with Email</string>
 </resources>
