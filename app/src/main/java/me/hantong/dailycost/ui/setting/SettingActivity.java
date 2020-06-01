@@ -11,6 +11,9 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import com.firebase.ui.auth.IdpResponse;
+import com.firebase.ui.auth.util.ExtraConstants;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,6 +25,7 @@ import me.hantong.dailycost.R;
 import me.hantong.dailycost.Router;
 import me.hantong.dailycost.base.BaseActivity;
 import me.hantong.dailycost.databinding.ActivitySettingBinding;
+import me.hantong.dailycost.ui.login.SignedInActivity;
 import me.hantong.dailycost.utill.ToastUtils;
 import pub.devrel.easypermissions.AppSettingsDialog;
 import pub.devrel.easypermissions.EasyPermissions;
@@ -37,6 +41,7 @@ public class SettingActivity extends BaseActivity implements EasyPermissions.Per
     private ActivitySettingBinding mBinding;
     private SettingViewModel mViewModel;
     private SettingAdapter mAdapter;
+    private IdpResponse mResponse;
 
     @Override
     protected int getLayoutId() {
@@ -63,6 +68,7 @@ public class SettingActivity extends BaseActivity implements EasyPermissions.Per
 
         mBinding.rvSetting.setLayoutManager(new LinearLayoutManager(this));
         mAdapter = new SettingAdapter(null);
+        mResponse = getIntent().getParcelableExtra(ExtraConstants.IDP_RESPONSE);
 
         List<SettingSectionEntity> list = new ArrayList<>();
 
@@ -76,6 +82,8 @@ public class SettingActivity extends BaseActivity implements EasyPermissions.Per
 
         list.add(new SettingSectionEntity(getString(R.string.text_setting_about_and_help)));
         list.add(new SettingSectionEntity(new SettingSectionEntity.Item(getString(R.string.text_about), getString(R.string.text_about_content))));
+        list.add(new SettingSectionEntity(getString(R.string.account)));
+        list.add(new SettingSectionEntity(new SettingSectionEntity.Item(getString(R.string.manage_your_account), null)));
 //        list.add(new SettingSectionEntity(new SettingSectionEntity.Item(getString(R.string.text_setting_score), getString(R.string.text_setting_good_score) + "\uD83D\uDE18")));
 //        list.add(new SettingSectionEntity(new SettingSectionEntity.Item(getString(R.string.text_setting_donate), "")));
 //        list.add(new SettingSectionEntity(new SettingSectionEntity.Item(getString(R.string.text_setting_lisence))));
@@ -96,6 +104,9 @@ public class SettingActivity extends BaseActivity implements EasyPermissions.Per
                     break;
                 case 7:
                     goOpenSource();
+                    break;
+                case 9:
+                    goAccount();
                     break;
                 default:
                     break;
@@ -269,4 +280,12 @@ public class SettingActivity extends BaseActivity implements EasyPermissions.Per
                 .start();
     }
 
+    private void startSignedInActivity(@Nullable IdpResponse response) {
+        startActivity(SignedInActivity.createIntent(this, response));
+    }
+
+    private void goAccount() {
+        startSignedInActivity(mResponse);
+        finish();
+    }
 }

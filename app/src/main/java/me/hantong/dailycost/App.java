@@ -3,6 +3,7 @@ package me.hantong.dailycost;
 import android.app.Application;
 
 import androidx.databinding.library.baseAdapters.BuildConfig;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -25,7 +26,7 @@ public class App extends Application {
     public void onCreate() {
         super.onCreate();
         INSTANCE = this;
-        Map<String, Target> mappings = new HashMap<>(8);
+        Map<String, Target> mappings = new HashMap<>(12);
         mappings.put(Router.Url.URL_HOME, new Target("mk://localhost/home"));
         mappings.put(Router.Url.URL_ADD_RECORD, new Target("mk://localhost/addRecord"));
         mappings.put(Router.Url.URL_TYPE_MANAGE, new Target("mk://localhost/typeManage"));
@@ -36,7 +37,8 @@ public class App extends Application {
         mappings.put(Router.Url.URL_SETTING, new Target("mk://localhost/setting"));
         mappings.put(Router.Url.URL_OPEN_SOURCE, new Target("mk://localhost/openSource"));
         mappings.put(Router.Url.URL_ABOUT, new Target("mk://localhost/about"));
-        mappings.put(Router.Url.URL_OPEN_SOURCE, new Target("mk://localhost/openSource"));
+//        mappings.put(Router.Url.URL_ACCOUNT, new Target("mk://localhost/account"));
+        mappings.put(Router.Url.URL_LOGIN, new Target("mk://localhost/login"));
 
         Floo.configuration()
                 .setDebugEnabled(BuildConfig.DEBUG)

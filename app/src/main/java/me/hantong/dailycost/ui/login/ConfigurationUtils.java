@@ -7,14 +7,15 @@ package me.hantong.dailycost.ui.login;
 
 import android.content.Context;
 
+import androidx.annotation.NonNull;
+
 import com.firebase.ui.auth.AuthUI;
-import me.hantong.dailycost.R;
 import com.google.firebase.auth.ActionCodeSettings;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import androidx.annotation.NonNull;
+import me.hantong.dailycost.R;
 
 public final class ConfigurationUtils {
 

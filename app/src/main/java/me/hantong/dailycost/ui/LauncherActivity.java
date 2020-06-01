@@ -19,7 +19,7 @@ public class LauncherActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Floo.navigation(this, Router.Url.URL_HOME).start();
+        Floo.navigation(this, Router.Url.URL_LOGIN).start();
         finish();
     }
 }

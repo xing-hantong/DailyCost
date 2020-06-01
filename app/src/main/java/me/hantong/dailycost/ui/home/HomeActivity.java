@@ -1,6 +1,7 @@
 package me.hantong.dailycost.ui.home;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,6 +12,9 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
+
+import com.firebase.ui.auth.IdpResponse;
+import com.firebase.ui.auth.util.ExtraConstants;
 
 import java.util.List;
 
@@ -49,6 +53,14 @@ public class HomeActivity extends BaseActivity implements StackCallback, EasyPer
 
     private HomeViewModel mViewModel;
     private HomeAdapter mAdapter;
+    private IdpResponse mResponse;
+
+    @NonNull
+    public static Intent createIntent(@NonNull Context context, @Nullable IdpResponse response) {
+        return new Intent().setClass(context, HomeActivity.class)
+                .putExtra(ExtraConstants.IDP_RESPONSE, response);
+    }
+
 
     @Override
     protected int getLayoutId() {
@@ -70,7 +82,7 @@ public class HomeActivity extends BaseActivity implements StackCallback, EasyPer
         mBinding.rvHome.setLayoutManager(new LinearLayoutManager(this));
         mAdapter = new HomeAdapter(null);
         mBinding.rvHome.setAdapter(mAdapter);
-
+        mResponse = getIntent().getParcelableExtra(ExtraConstants.IDP_RESPONSE);
         mAdapter.setOnItemChildLongClickListener((adapter, view, position) -> {
             showOperateDialog(mAdapter.getData().get(position));
             return false;
@@ -79,6 +91,7 @@ public class HomeActivity extends BaseActivity implements StackCallback, EasyPer
 
     public void settingClick(View view) {
         Floo.navigation(this, Router.Url.URL_SETTING)
+                .putExtra(ExtraConstants.IDP_RESPONSE, mResponse)
                 .start();
     }
 

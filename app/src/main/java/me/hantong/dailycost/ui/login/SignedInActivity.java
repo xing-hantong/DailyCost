@@ -4,6 +4,7 @@ package me.hantong.dailycost.ui.login;
  * @author X
  * @date 2020/5/28
  */
+
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -14,10 +15,15 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.StringRes;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.firebase.ui.auth.AuthUI;
 import com.firebase.ui.auth.IdpResponse;
 import com.firebase.ui.auth.util.ExtraConstants;
-import me.hantong.dailycost.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.snackbar.Snackbar;
@@ -27,23 +33,15 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthProvider;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
-import com.google.firebase.auth.PhoneAuthProvider;
-import com.google.firebase.auth.TwitterAuthProvider;
 import com.google.firebase.auth.UserInfo;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.annotation.StringRes;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-
-import static com.firebase.ui.auth.AuthUI.EMAIL_LINK_PROVIDER;
+import me.hantong.dailycost.R;
 
 public class SignedInActivity extends AppCompatActivity {
     private static final String TAG = "SignedInActivity";
@@ -132,12 +130,6 @@ public class SignedInActivity extends AppCompatActivity {
 
     private void populateProfile(@Nullable IdpResponse response) {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-//        if (user.getPhotoUrl() != null) {
-//            GlideApp.with(this)
-//                    .load(user.getPhotoUrl())
-//                    .fitCenter()
-//                    .into(mUserProfilePicture);
-//        }
 
         mUserEmail.setText(
                 TextUtils.isEmpty(user.getEmail()) ? "No email" : user.getEmail());
@@ -165,17 +157,8 @@ public class SignedInActivity extends AppCompatActivity {
                     case FacebookAuthProvider.PROVIDER_ID:
                         providers.add(getString(R.string.providers_facebook));
                         break;
-                    case TwitterAuthProvider.PROVIDER_ID:
-                        providers.add(getString(R.string.providers_twitter));
-                        break;
                     case EmailAuthProvider.PROVIDER_ID:
                         providers.add(getString(R.string.providers_email));
-                        break;
-                    case PhoneAuthProvider.PROVIDER_ID:
-                        providers.add(getString(R.string.providers_phone));
-                        break;
-                    case EMAIL_LINK_PROVIDER:
-                        providers.add(getString(R.string.providers_email_link));
                         break;
                     case FirebaseAuthProvider.PROVIDER_ID:
                         // Ignore this provider, it's not very meaningful

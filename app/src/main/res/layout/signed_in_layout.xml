@@ -23,7 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:drawableTop="@drawable/firebase_auth_120dp"
+            android:drawableTop="@drawable/ic_googleg_color_144dp"
             android:text="@string/signed_in_header" />
 
         <LinearLayout
