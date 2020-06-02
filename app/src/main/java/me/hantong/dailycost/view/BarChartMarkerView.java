@@ -21,7 +21,7 @@ public class BarChartMarkerView extends MarkerView {
     private TextView tvContent;
 
     public BarChartMarkerView(Context context) {
-        super(context, R.layout.bar_chart_marker_view);
+        super(context, R.layout.item_bar_chart_marker_view);
         tvContent = findViewById(R.id.tv_content);
     }
 

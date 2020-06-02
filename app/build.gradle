@@ -132,13 +132,9 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     // test
     testImplementation deps.junit
-    androidTestImplementation deps.test_runner
     androidTestImplementation deps.spresso_core
     // 支持库
-    implementation deps.support.app_compat
     implementation deps.support.design
-    // customtabs
-    implementation deps.support.customtabs
     // ViewModel and LiveData
     implementation deps.lifecycle.extensions
     annotationProcessor deps.lifecycle.compiler
@@ -147,32 +143,23 @@ dependencies {
     implementation deps.room.rxjava2
     annotationProcessor deps.room.compiler
     // 第三方库
-    implementation deps.rxjava
     implementation deps.rxandroid
     // base adapter
     implementation deps.BRVAH
     // 路由
     implementation deps.floo
-    // 日期时间选择器
-    implementation deps.datetimepicker
     // 图表
     implementation deps.MPChart
     // 动态权限申请
     implementation deps.permission
     // 保存文件
     implementation deps.storage
-    // 时间格式化
-    implementation deps.prettytime
-    // 圆形 ImageView
-    implementation deps.circleimageview
-    // Google Firebase
-    implementation 'com.google.firebase:firebase-analytics:17.4.2'
     // FirebaseUI
-    implementation 'com.firebaseui:firebase-ui-auth:6.2.1'
+    implementation deps.firebase_ui_auth
     // Facebook Login
-    implementation 'com.facebook.android:facebook-login:5.0.0'
+    implementation deps.facebook_login
     // ButterKnife
-    implementation 'com.jakewharton:butterknife:10.2.1'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
+    implementation deps.jakewharton.butterknife
+    annotationProcessor deps.jakewharton.butterknife_compiler
 
 }

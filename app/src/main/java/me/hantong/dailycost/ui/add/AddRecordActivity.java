@@ -1,13 +1,14 @@
 package me.hantong.dailycost.ui.add;
 
+import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.DatePicker;
 
 import androidx.annotation.Nullable;
 import androidx.lifecycle.ViewModelProviders;
 
-import com.wdullaer.materialdatetimepicker.date.DatePickerDialog;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -48,6 +49,10 @@ public class AddRecordActivity extends BaseActivity {
     private int mCurrentType;
 
     private RecordWithType mRecord;
+
+    int  mYear = mCurrentChooseCalendar.get(Calendar.YEAR);
+    int  mMonth = mCurrentChooseCalendar.get(Calendar.MONTH);
+    int  mDay = mCurrentChooseCalendar.get(Calendar.DAY_OF_MONTH);
 
     @Override
     protected int getLayoutId() {
@@ -101,15 +106,19 @@ public class AddRecordActivity extends BaseActivity {
         });
 
         mBinding.qmTvDate.setOnClickListener(v -> {
-            DatePickerDialog dpd = DatePickerDialog.newInstance(
-                    (view, year, monthOfYear, dayOfMonth) -> {
-                        mCurrentChooseDate = DateUtils.getDate(year, monthOfYear + 1, dayOfMonth);
-                        mCurrentChooseCalendar.setTime(mCurrentChooseDate);
-                        mBinding.qmTvDate.setText(DateUtils.getWordTime(mCurrentChooseDate));
-                    }, mCurrentChooseCalendar);
-            dpd.setMaxDate(Calendar.getInstance());
-            dpd.show(getFragmentManager(), TAG_PICKER_DIALOG);
+            DatePickerDialog datePickerDialog = new DatePickerDialog(this,
+                    new DatePickerDialog.OnDateSetListener() {
+                        @Override
+                        public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+                            mCurrentChooseDate = DateUtils.getDate(year, monthOfYear + 1, dayOfMonth);
+                            mCurrentChooseCalendar.setTime(mCurrentChooseDate);
+                            mBinding.qmTvDate.setText(DateUtils.getWordTime(mCurrentChooseDate));
+                        }
+                    },
+                    mYear, mMonth,mDay);
+            datePickerDialog.show();
         });
+
         mBinding.typeChoice.rgType.setOnCheckedChangeListener((group, checkedId) -> {
 
             if (checkedId == R.id.rb_outlay) {

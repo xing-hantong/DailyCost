@@ -2,8 +2,6 @@ package me.hantong.dailycost.utill;
 
 import com.snatik.storage.Storage;
 
-import org.ocpsoft.prettytime.PrettyTime;
-
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Date;
@@ -96,14 +94,13 @@ public class BackupUtil {
             return backupBeans;
         }
         File fileTemp;
-        PrettyTime prettyTime = new PrettyTime();
         for (int i = 0; i < files.size(); i++) {
             fileTemp = files.get(i);
             bean = new BackupBean();
             bean.file = fileTemp;
             bean.name = fileTemp.getName();
             bean.size = storage.getReadableSize(fileTemp);
-            bean.time = prettyTime.format(new Date(fileTemp.lastModified()));
+            bean.time = new Date(fileTemp.lastModified()).toString();
             backupBeans.add(bean);
         }
         return backupBeans;

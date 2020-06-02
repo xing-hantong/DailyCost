@@ -178,8 +178,5 @@
 }
 -dontnote rx.internal.util.PlatformDependent
 
-# prettytime
--keep class org.ocpsoft.prettytime.i18n.**
-
 # MPAndroidChart 不 keep 会丢失动画效果
 -keep class com.github.mikephil.charting.** { *; }

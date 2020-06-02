@@ -74,7 +74,7 @@ public class SignedInActivity extends AppCompatActivity {
 
         IdpResponse response = getIntent().getParcelableExtra(ExtraConstants.IDP_RESPONSE);
 
-        setContentView(R.layout.signed_in_layout);
+        setContentView(R.layout.activity_signed_in);
         ButterKnife.bind(this);
         populateProfile(response);
         populateIdpToken(response);

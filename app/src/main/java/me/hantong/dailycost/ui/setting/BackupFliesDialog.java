@@ -37,7 +37,7 @@ public class BackupFliesDialog {
 
     private void setupDialog() {
         LayoutInflater layoutInflater = LayoutInflater.from(mContext);
-        View contentView = layoutInflater.inflate(R.layout.dialog_backup_files, null, false);
+        View contentView = layoutInflater.inflate(R.layout.item_dialog_backup_files, null, false);
         RecyclerView rvFiles = contentView.findViewById(R.id.rv_files);
         rvFiles.setLayoutManager(new LinearLayoutManager(mContext));
         FilesAdapter adapter = new FilesAdapter(null);

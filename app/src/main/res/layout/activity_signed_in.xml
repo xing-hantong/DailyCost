@@ -24,6 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:drawableTop="@drawable/ic_googleg_color_144dp"
+            android:textColor="@color/colorTextWhite1"
             android:text="@string/signed_in_header" />
 
         <LinearLayout
@@ -57,6 +58,7 @@
             style="@style/Base.TextAppearance.AppCompat.Subhead"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/colorTextWhite1"
             android:text="@string/user_profile_header" />
 
         <LinearLayout
@@ -83,30 +85,35 @@
                     android:id="@+id/user_email"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/colorTextWhite3"
                     android:textIsSelectable="true" />
 
                 <TextView
                     android:id="@+id/user_phone_number"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/colorTextWhite3"
                     android:textIsSelectable="true" />
 
                 <TextView
                     android:id="@+id/user_display_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/colorTextWhite3"
                     android:textIsSelectable="true" />
 
                 <TextView
                     android:id="@+id/user_enabled_providers"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/colorTextWhite3"
                     android:textIsSelectable="true" />
 
                 <TextView
                     android:id="@+id/user_is_new"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/colorTextWhite3"
                     android:textIsSelectable="false" />
 
             </LinearLayout>
@@ -123,12 +130,14 @@
                 style="@style/Base.TextAppearance.AppCompat.Subhead"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/colorTextWhite1"
                 android:text="@string/idp_token" />
 
             <TextView
                 android:id="@+id/idp_token"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/colorTextWhite3"
                 android:textIsSelectable="true" />
 
         </LinearLayout>
@@ -143,12 +152,14 @@
                 style="@style/Base.TextAppearance.AppCompat.Subhead"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/colorTextWhite1"
                 android:text="@string/idp_secret" />
 
             <TextView
                 android:id="@+id/idp_secret"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/colorTextWhite3"
                 android:textIsSelectable="true" />
 
         </LinearLayout>
