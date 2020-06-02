@@ -94,7 +94,7 @@
     <string name="text_backup">Back up now</string>
     <string name="text_backup_save">Backup file will be saved to/sdcard/backup_dailycost/DailyCostBackupUser.db</string>
     <string name="text_setting_money">Bookkeeping</string>
-    <string name="text_setting_type_manage">type management</string>
+    <string name="text_setting_type_manage">Type management</string>
     <string name="text_setting_backup">Backup</string>
     <string name="text_go_backup">Back up now</string>
     <string name="text_setting_restore">Restore</string>
@@ -103,14 +103,15 @@
     <string name="text_setting_score">Score</string>
     <string name="text_setting_donate">Donate</string>
     <string name="text_privacy_policy">Privacy Policy</string>
+
     <string name="text_setting_lisence">Open source license</string>
     <string name="text_setting_help">Help</string>
     <string name="text_setting_good_score">Give a good score,please</string>
     <string name="text_about_content">Understand our design philosophy</string>
     <string name="text_setting_auto_backup">Automatic backup</string>
-    <string name="text_setting_go_backup_content">Backup file will be saved to/sdcard/backup_dailycost</string>
-    <string name="text_setting_restore_content">Backup files will read from/sdcard/backup_dailycost</string>
-    <string name="text_setting_auto_backup_content">Data change automatic backup (recommended to open)</string>
+    <string name="text_setting_go_backup_content">Save to /sdcard/backup_dailycost</string>
+    <string name="text_setting_restore_content">Backup from /sdcard/backup_dailycost</string>
+    <string name="text_setting_auto_backup_content">recommended to open</string>
     <string name="text_restore">Restore</string>
     <string name="text_list_restore">The following is the backup file, click restore:</string>
     <string name="text_restore_tip">The backup file name with Auto word indicates automatic backup. With User indication, click the Backup Now button to manually back up, and before restoration, save a copy of the data before restoration.</string>
@@ -130,6 +131,8 @@
     <string name="text_icon_launcher">Want a designer to design an application launch icon</string>
     <string name="text_share_to">Share to</string>
     <string name="text_app_slogan">Simple, pure accounting application</string>
+    <string name="text_manage_your_account">Account management</string>
+    <string name="text_other">Other</string>
 
     <!-- Facebook application ID and custom URL scheme (app ID prefixed by 'fb'). -->
     <string name="facebook_application_id" translatable="false">584173995540366</string>
@@ -188,9 +191,9 @@
     <string name="used_providers">Providers used: %s</string>
     <string name="idp_token">IDP Token</string>
     <string name="idp_secret">IDP Secret</string>
+    <string name="start_sign_in">Click to Sign In</string>
 
     <!-- Login -->
-    <string name="manage_your_account">Manage your account</string>
-    <string name="account">Account</string>
-    <string name="start_sign_in">Click to Sign In</string>
+
+
 </resources>

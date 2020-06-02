@@ -74,20 +74,16 @@ public class SettingActivity extends BaseActivity implements EasyPermissions.Per
 
         list.add(new SettingSectionEntity(getString(R.string.text_setting_money)));
         list.add(new SettingSectionEntity(new SettingSectionEntity.Item(getString(R.string.text_setting_type_manage), null)));
+        list.add(new SettingSectionEntity(new SettingSectionEntity.Item(getString(R.string.text_manage_your_account), null)));
 
         list.add(new SettingSectionEntity(getString(R.string.text_setting_backup)));
         list.add(new SettingSectionEntity(new SettingSectionEntity.Item(getString(R.string.text_go_backup), getString(R.string.text_setting_go_backup_content))));
         list.add(new SettingSectionEntity(new SettingSectionEntity.Item(getString(R.string.text_setting_restore), getString(R.string.text_setting_restore_content))));
         list.add(new SettingSectionEntity(new SettingSectionEntity.Item(getString(R.string.text_setting_auto_backup), getString(R.string.text_setting_auto_backup_content), ConfigManager.isAutoBackup())));
 
-        list.add(new SettingSectionEntity(getString(R.string.text_setting_about_and_help)));
-        list.add(new SettingSectionEntity(new SettingSectionEntity.Item(getString(R.string.text_about), getString(R.string.text_about_content))));
-        list.add(new SettingSectionEntity(getString(R.string.account)));
-        list.add(new SettingSectionEntity(new SettingSectionEntity.Item(getString(R.string.manage_your_account), null)));
-//        list.add(new SettingSectionEntity(new SettingSectionEntity.Item(getString(R.string.text_setting_score), getString(R.string.text_setting_good_score) + "\uD83D\uDE18")));
-//        list.add(new SettingSectionEntity(new SettingSectionEntity.Item(getString(R.string.text_setting_donate), "")));
-//        list.add(new SettingSectionEntity(new SettingSectionEntity.Item(getString(R.string.text_setting_lisence))));
-//        list.add(new SettingSectionEntity(new SettingSectionEntity.Item(getString(R.string.text_setting_help))));
+        list.add(new SettingSectionEntity(getString(R.string.text_other)));
+        list.add(new SettingSectionEntity(new SettingSectionEntity.Item(getString(R.string.text_setting_lisence), null)));
+
 
         mAdapter.setNewData(list);
 
@@ -96,17 +92,17 @@ public class SettingActivity extends BaseActivity implements EasyPermissions.Per
                 case 1:
                     goTypeManage();
                     break;
-                case 3:
-                    showBackupDialog();
+                case 2:
+                    goAccount();
                     break;
                 case 4:
+                    showBackupDialog();
+                    break;
+                case 5:
                     showRestoreDialog();
                     break;
-                case 7:
+                case 8:
                     goOpenSource();
-                    break;
-                case 9:
-                    goAccount();
                     break;
                 default:
                     break;
@@ -115,7 +111,7 @@ public class SettingActivity extends BaseActivity implements EasyPermissions.Per
         // Switch
         mAdapter.setOnItemChildClickListener((adapter12, view, position) -> {
             switch (position) {
-                case 5:
+                case 6:
                     switchAutoBackup(position);
                     break;
                 default:
