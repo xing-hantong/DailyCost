@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">DailyCost</string>
 
-    <string name="ok">Ok</string>
+    <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
 
     <string name="content_des_setting">setting</string>
@@ -24,9 +24,6 @@
     <string name="toast_get_statistics_fail">Failed to get statistics</string>
     <string name="toast_get_month_summary_fail">Failed to get summary data for the month</string>
     <string name="toast_get_type_summary_fail">Failed to get type summary data</string>
-    <string name="toast_not_install_market">Your phone does not have an Android app market installed</string>
-    <string name="toast_not_install_alipay">Thank you, you did not install Alipay application</string>
-    <string name="toast_is_not_writable_external">Backup failed, external storage is unavailable</string>
     <string name="toast_restore_fail">Failed to restore the backup</string>
     <string name="toast_backup_list_fail">Failed to get backup file list</string>
     <string name="toast_backup_success">Backup was successful</string>
@@ -84,13 +81,11 @@
     <string name="text_money_symbol">$</string>
     <string name="text_month_outlay_symbol">Pay&#160;$</string>
     <string name="text_month_income_symbol">Earn&#160;$</string>
-    <string name="text_unit_account"></string>
+    <string name="text_unit_account">&#160;records</string>
     <string name="text_day">&#160;</string>
-    <string name="text_choose_month">Select month</string>
     <string name="text_sort_time">By time</string>
     <string name="text_sort_money">By amount</string>
     <string name="text_title_open_source">License</string>
-    <string name="text_title_about">About</string>
     <string name="text_backup">Back up now</string>
     <string name="text_backup_save">Backup file will be saved to/sdcard/backup_dailycost/DailyCostBackupUser.db</string>
     <string name="text_setting_money">Bookkeeping</string>
@@ -98,16 +93,7 @@
     <string name="text_setting_backup">Backup</string>
     <string name="text_go_backup">Back up now</string>
     <string name="text_setting_restore">Restore</string>
-    <string name="text_setting_about_and_help">About|Help</string>
-    <string name="text_about">About</string>
-    <string name="text_setting_score">Score</string>
-    <string name="text_setting_donate">Donate</string>
-    <string name="text_privacy_policy">Privacy Policy</string>
-
     <string name="text_setting_lisence">Open source license</string>
-    <string name="text_setting_help">Help</string>
-    <string name="text_setting_good_score">Give a good score,please</string>
-    <string name="text_about_content">Understand our design philosophy</string>
     <string name="text_setting_auto_backup">Automatic backup</string>
     <string name="text_setting_go_backup_content">Save to /sdcard/backup_dailycost</string>
     <string name="text_setting_restore_content">Backup from /sdcard/backup_dailycost</string>
@@ -118,19 +104,10 @@
     <string name="text_before_reverting">_BeforeReverting</string>
     <string name="text_storage">Storage permissions</string>
     <string name="text_storage_content">In order to back up your accounting data automatically, you need to open the storage permission.</string>
-    <string name="text_open_permissions">Permissions</string>
     <string name="text_storage_permission_tip">Backup related operations require storage permissions to set open permissions</string>
     <string name="text_close_auto_backup">Turn off automatic backup</string>
     <string name="text_close_auto_backup_tip">After the automatic backup is turned off, you need to manually click 「Back up now」 to back up the data and you may lose some of the latest data.</string>
     <string name="text_tip_backup_fail">Auto backup failed</string>
-    <string name="text_share">Share</string>
-    <string name="text_more">More</string>
-    <string name="text_dev_designer">Developer &amp; Designer</string>
-    <string name="text_designer">Designer</string>
-    <string name="text_developer_designer">Developer &amp; Designer</string>
-    <string name="text_icon_launcher">Want a designer to design an application launch icon</string>
-    <string name="text_share_to">Share to</string>
-    <string name="text_app_slogan">Simple, pure accounting application</string>
     <string name="text_manage_your_account">Account management</string>
     <string name="text_other">Other</string>
 
@@ -138,22 +115,11 @@
     <string name="facebook_application_id" translatable="false">584173995540366</string>
     <string name="facebook_login_protocol_scheme" translatable="false">fb584173995540366</string>
 
-    <string name="sign_in">Sign In</string>
-    <string name="sign_out">Sign Out</string>
-    <string name="signed_out">Signed Out</string>
-
-    <!-- Auth UI -->
-    <string name="sign_in_start">Sign In</string>
-    <string name="sign_in_silent">Sign in silently</string>
-
     <string name="providers_header">Auth providers</string>
     <string name="providers_google">Google</string>
     <string name="providers_facebook">Facebook</string>
     <string name="providers_email">Email</string>
     <string name="providers_anonymous">Anonymous</string>
-
-    <string name="theme_header">Theme</string>
-    <string name="tos_pp_header">Terms of Service and Privacy Policy</string>
 
     <string name="google_scopes_header">Example extra Google scopes</string>
     <string name="google_scope_drive_file">Drive File</string>
@@ -179,10 +145,10 @@
     <string name="unknown_error">An unknown error occurred</string>
 
     <!-- Auth UI - Signed in -->
+    <string name="sign_out">Sign Out</string>
+    <string name="sign_in_start">Sign In</string>
     <string name="signed_in_header">You are signed in!</string>
     <string name="delete_account_label">Delete account</string>
-
-    <string name="sign_in_failed">Sign in failed</string>
     <string name="sign_out_failed">Sign out failed</string>
     <string name="delete_account_failed">Delete account failed</string>
 
@@ -192,8 +158,4 @@
     <string name="idp_token">IDP Token</string>
     <string name="idp_secret">IDP Secret</string>
     <string name="start_sign_in">Click to Sign In</string>
-
-    <!-- Login -->
-
-
 </resources>

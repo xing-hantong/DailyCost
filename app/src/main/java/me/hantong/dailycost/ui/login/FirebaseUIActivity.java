@@ -54,14 +54,6 @@ public class FirebaseUIActivity extends AppCompatActivity {
 
     @BindView(R.id.google_tos_privacy) TextView mUseGoogleTosPp;
 
-    @BindView(R.id.google_scopes_header) TextView mGoogleScopesHeader;
-    @BindView(R.id.google_scope_drive_file) CheckBox mGoogleScopeDriveFile;
-    @BindView(R.id.google_scope_youtube_data) CheckBox mGoogleScopeYoutubeData;
-
-    @BindView(R.id.facebook_permissions_header) TextView mFacebookPermissionsHeader;
-    @BindView(R.id.facebook_permission_friends) CheckBox mFacebookPermissionFriends;
-    @BindView(R.id.facebook_permission_photos) CheckBox mFacebookPermissionPhotos;
-
     @BindView(R.id.credential_selector_enabled) CheckBox mEnableCredentialSelector;
     @BindView(R.id.hint_selector_enabled) CheckBox mEnableHintSelector;
     @BindView(R.id.allow_new_email_accounts) CheckBox mAllowNewEmailAccounts;
@@ -82,32 +74,13 @@ public class FirebaseUIActivity extends AppCompatActivity {
             mUseGoogleProvider.setChecked(false);
             mUseGoogleProvider.setEnabled(false);
             mUseGoogleProvider.setText(R.string.google_label_missing_config);
-            setGoogleScopesEnabled(false);
-        } else {
-            setGoogleScopesEnabled(mUseGoogleProvider.isChecked());
-            mUseGoogleProvider.setOnCheckedChangeListener(new OnCheckedChangeListener() {
-                @Override
-                public void onCheckedChanged(CompoundButton compoundButton, boolean checked) {
-                    setGoogleScopesEnabled(checked);
-                }
-            });
         }
 
         if (ConfigurationUtils.isFacebookMisconfigured(this)) {
             mUseFacebookProvider.setChecked(false);
             mUseFacebookProvider.setEnabled(false);
             mUseFacebookProvider.setText(R.string.facebook_label_missing_config);
-            setFacebookPermissionsEnabled(false);
-        } else {
-            setFacebookPermissionsEnabled(mUseFacebookProvider.isChecked());
-            mUseFacebookProvider.setOnCheckedChangeListener(new OnCheckedChangeListener() {
-                @Override
-                public void onCheckedChanged(CompoundButton compoundButton, boolean checked) {
-                    setFacebookPermissionsEnabled(checked);
-                }
-            });
         }
-
 
         mUseEmailProvider.setChecked(true);
 
@@ -213,12 +186,11 @@ public class FirebaseUIActivity extends AppCompatActivity {
 
         if (mUseGoogleProvider.isChecked()) {
             selectedProviders.add(
-                    new IdpConfig.GoogleBuilder().setScopes(getGoogleScopes()).build());
+                    new IdpConfig.GoogleBuilder().build());
         }
 
         if (mUseFacebookProvider.isChecked()) {
             selectedProviders.add(new IdpConfig.FacebookBuilder()
-                    .setPermissions(getFacebookPermissions())
                     .build());
         }
 
@@ -235,40 +207,6 @@ public class FirebaseUIActivity extends AppCompatActivity {
         }
 
         return selectedProviders;
-    }
-
-    private void setGoogleScopesEnabled(boolean enabled) {
-        mGoogleScopesHeader.setEnabled(enabled);
-        mGoogleScopeDriveFile.setEnabled(enabled);
-        mGoogleScopeYoutubeData.setEnabled(enabled);
-    }
-
-    private void setFacebookPermissionsEnabled(boolean enabled) {
-        mFacebookPermissionsHeader.setEnabled(enabled);
-        mFacebookPermissionFriends.setEnabled(enabled);
-        mFacebookPermissionPhotos.setEnabled(enabled);
-    }
-
-    private List<String> getGoogleScopes() {
-        List<String> result = new ArrayList<>();
-        if (mGoogleScopeYoutubeData.isChecked()) {
-            result.add("https://www.googleapis.com/auth/youtube.readonly");
-        }
-        if (mGoogleScopeDriveFile.isChecked()) {
-            result.add(Scopes.DRIVE_FILE);
-        }
-        return result;
-    }
-
-    private List<String> getFacebookPermissions() {
-        List<String> result = new ArrayList<>();
-        if (mFacebookPermissionFriends.isChecked()) {
-            result.add("user_friends");
-        }
-        if (mFacebookPermissionPhotos.isChecked()) {
-            result.add("user_photos");
-        }
-        return result;
     }
 
     private void showSnackbar(@StringRes int errorMessageRes) {
