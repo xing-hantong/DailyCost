@@ -8,9 +8,6 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:navigationBarColor">@color/colorPrimary</item>
         <item name="android:windowBackground">@color/colorPrimary</item>
-        <item name="android:textColor">@color/colorTextWhite1</item>
-        <item name="android:textColorPrimary">@color/colorTextWhite2</item>
-        <item name="android:textColorSecondary">@color/colorTextWhite3</item>
     </style>
 
     <style name="AppTheme.Translucent">
@@ -19,6 +16,18 @@
         <!-- Note:activity 不能用这个属性，android:screenOrientation="portrait" ，否则8。0以上设置会奔溃-->
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="LoginTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:navigationBarColor">@color/colorPrimary</item>
+        <item name="android:windowBackground">@color/colorPrimary</item>
+        <item name="android:textColor">@color/colorTextWhite1</item>
+        <item name="android:textColorPrimary">@color/colorTextWhite2</item>
+        <item name="android:textColorSecondary">@color/colorTextWhite3</item>
     </style>
 
     <!-- 键盘 -->

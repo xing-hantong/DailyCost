@@ -17,12 +17,6 @@ public class SettingSectionEntity extends SectionEntity<SettingSectionEntity.Ite
     }
 
     public static class Item {
-        public Item(String content) {
-            this.title = null;
-            this.content = content;
-            this.isShowSwitch = false;
-            this.isConfigOpen = false;
-        }
 
         public Item(String title, String content) {
             this.title = title;

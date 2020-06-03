@@ -104,7 +104,7 @@ public class FirebaseUIActivity extends AppCompatActivity {
     @NonNull
     public Intent buildSignInIntent(@Nullable String link) {
         AuthUI.SignInIntentBuilder builder = AuthUI.getInstance().createSignInIntentBuilder()
-                .setTheme(R.style.AppTheme)
+                .setTheme(R.style.LoginTheme)
                 .setLogo(R.drawable.ic_googleg_color_144dp)
                 .setAvailableProviders(getSelectedProviders())
                 .setIsSmartLockEnabled(mEnableCredentialSelector.isChecked(),

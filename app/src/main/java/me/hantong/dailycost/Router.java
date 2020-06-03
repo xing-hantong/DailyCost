@@ -22,7 +22,6 @@ public class Router {
         public static final String URL_SETTING = "setting";
         public static final String URL_OPEN_SOURCE = "open_source";
         public static final String URL_ABOUT = "about";
-//        public static final String URL_ACCOUNT = "account";
         public static final String URL_LOGIN = "login";
     }
 
@@ -46,7 +45,6 @@ public class Router {
         public static final String KEY_YEAR = "key_year";
         public static final String KEY_MONTH = "key_month";
         public static final String KEY_SORT_TYPE = "key_sort_type";
-        public static final String KEY_USER_LOGIN = "key_user_login";
 
     }
 }

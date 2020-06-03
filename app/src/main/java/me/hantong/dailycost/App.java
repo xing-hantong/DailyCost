@@ -37,7 +37,6 @@ public class App extends Application {
         mappings.put(Router.Url.URL_SETTING, new Target("mk://localhost/setting"));
         mappings.put(Router.Url.URL_OPEN_SOURCE, new Target("mk://localhost/openSource"));
         mappings.put(Router.Url.URL_ABOUT, new Target("mk://localhost/about"));
-//        mappings.put(Router.Url.URL_ACCOUNT, new Target("mk://localhost/account"));
         mappings.put(Router.Url.URL_LOGIN, new Target("mk://localhost/login"));
 
         Floo.configuration()

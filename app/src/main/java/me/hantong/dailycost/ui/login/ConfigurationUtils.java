@@ -32,38 +32,4 @@ public final class ConfigurationUtils {
 
     }
 
-    @NonNull
-    public static List<AuthUI.IdpConfig> getConfiguredProviders(@NonNull Context context) {
-        List<AuthUI.IdpConfig> providers = new ArrayList<>();
-
-        if (!isGoogleMisconfigured(context)) {
-            providers.add(new AuthUI.IdpConfig.GoogleBuilder().build());
-        }
-//        providers.add(new AuthUI.IdpConfig.GoogleBuilder().build());
-
-        if (!isFacebookMisconfigured(context)) {
-            providers.add(new AuthUI.IdpConfig.FacebookBuilder().build());
-        }
-//        providers.add(new AuthUI.IdpConfig.FacebookBuilder().build());
-
-        ActionCodeSettings actionCodeSettings = ActionCodeSettings.newBuilder()
-                .setAndroidPackageName("me.hantong.dailycost", true, null)
-                .setHandleCodeInApp(true)
-                .setUrl("https://google.com")
-                .build();
-
-        providers.add(new AuthUI.IdpConfig.EmailBuilder()
-                .setAllowNewAccounts(true)
-                .enableEmailLinkSignIn()
-                .setActionCodeSettings(actionCodeSettings)
-                .build());
-
-        providers.add(new AuthUI.IdpConfig.TwitterBuilder().build());
-        providers.add(new AuthUI.IdpConfig.PhoneBuilder().build());
-        providers.add(new AuthUI.IdpConfig.MicrosoftBuilder().build());
-        providers.add(new AuthUI.IdpConfig.YahooBuilder().build());
-        providers.add(new AuthUI.IdpConfig.AppleBuilder().build());
-
-        return providers;
-    }
 }

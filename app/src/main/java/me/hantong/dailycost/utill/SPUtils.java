@@ -36,36 +36,8 @@ public class SPUtils {
         sp = App.getINSTANCE().getSharedPreferences(spName, Context.MODE_PRIVATE);
     }
 
-    public boolean put(@NonNull final String key, final String value) {
-        return sp.edit().putString(key, value).commit();
-    }
-
-    public String getString(@NonNull final String key) {
-        return getString(key, "");
-    }
-
-    public String getString(@NonNull final String key, final String defaultValue) {
-        return sp.getString(key, defaultValue);
-    }
-
-    public boolean put(@NonNull final String key, final int value) {
-        return sp.edit().putInt(key, value).commit();
-    }
-
-    public int getInt(@NonNull final String key) {
-        return getInt(key, -1);
-    }
-
-    public int getInt(@NonNull final String key, final int defaultValue) {
-        return sp.getInt(key, defaultValue);
-    }
-
     public boolean put(@NonNull final String key, final boolean value) {
         return sp.edit().putBoolean(key, value).commit();
-    }
-
-    public boolean getBoolean(@NonNull final String key) {
-        return getBoolean(key, false);
     }
 
     public boolean getBoolean(@NonNull final String key, final boolean defaultValue) {

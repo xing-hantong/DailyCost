@@ -121,14 +121,6 @@
     <string name="providers_email">Email</string>
     <string name="providers_anonymous">Anonymous</string>
 
-    <string name="google_scopes_header">Example extra Google scopes</string>
-    <string name="google_scope_drive_file">Drive File</string>
-    <string name="google_scope_youtube_data">Youtube data</string>
-
-    <string name="facebook_permissions_header">Example extra Facebook permissions</string>
-    <string name="facebook_permission_friends">Friends</string>
-    <string name="facebook_permission_photos">Photos</string>
-
     <string name="options_header">Other Options</string>
     <string name="options_enable_credential_selector">Enable Smart Lock\'s credential selector</string>
     <string name="options_enable_hint_selector">Enable Smart Lock\'s hint selector</string>

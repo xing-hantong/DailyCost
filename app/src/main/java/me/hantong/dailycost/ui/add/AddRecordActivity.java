@@ -38,7 +38,6 @@ import me.hantong.dailycost.viewmodel.ViewModelFactory;
 public class AddRecordActivity extends BaseActivity {
 
     private static final String TAG = AddRecordActivity.class.getSimpleName();
-    private static final String TAG_PICKER_DIALOG = "Datepickerdialog";
 
     private ActivityAddRecordBinding mBinding;
 

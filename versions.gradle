@@ -3,7 +3,6 @@ def versions = [:]
 
 // gradle_plugin
 versions.gradle_plugin = "3.6.1"
-versions.AndResGuard_gradle_plugin = "1.2.13"
 versions.google_services = "4.3.3"
 // test
 versions.junit = "4.12"
@@ -32,7 +31,6 @@ versions.jakewharton = "10.2.1"
 
 def deps = [:]
 deps.gradle_plugin = "com.android.tools.build:gradle:$versions.gradle_plugin"
-deps.AndResGuard_gradle_plugin = "com.tencent.mm:AndResGuard-gradle-plugin:$versions.AndResGuard_gradle_plugin"
 deps.google_services = "com.google.gms:google-services:$versions.google_services"
 deps.junit = "junit:junit:$versions.junit"
 deps.spresso_core = "com.android.support.test.espresso:espresso-core:$versions.espresso"
