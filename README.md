@@ -4,20 +4,20 @@
 
 ## Overview
 
-This is an elaborate app for recording daily expenses and income. It has simple but useful functions. The main idea is to help users to keep a record of their daily expenses. Users can choose what kind of expense/income they generate when it happened, and the amount of money they spent/got. After that, the home page will update with the total sum of pays and earns of each month and list all the money records in the chronological order from recent to past. 
+This is an elaborate app for recording daily expenses and income. It has simple but useful functions. The main idea is to help users to keep a record of their daily expenditures and incomes. Users can choose what kind of expense/income they generate, when it happened, and the amount of money they spent/got. After that, the home page will update with the total sum of pays and earns of each month and list all the money records in the order from recent to past. 
 
-To see more details about the cash flow, click the statistic button in the top right corner. With the bar chart by time sequence and pie chart by the different type of expense, you can easily know when you spend money most, and what kind of thing cost you most. In the "Reports" label, click an expense type and you can check this type of expenses by time order or amount order. Users also have easy access to manage their records. Just long-press on the record, and you can choose to modify or delete this record from the pop-up tab. 
+To see more details about the cash flow, view the statistic page. With the bar chart by time sequence and pie chart by the different type of expense, you can easily know when you spend money most, and what kind of thing cost you most. In the "Reports" label, click an expense type and you can check this type of expenses by time order or amount order. Users also have easy access to manage their records. Long-press on the record to modify or delete this record from a pop-up dialogue. 
 
-Also, users can manage the type of expenses. From setting (top left corner)->Type management, you can change the name and icon of each kind of expense, or add a new one from the pre-designed database. In the Sort option, you can long-press the items to sort them.
+Also, users can manage the type of expenses. You can change the name and icon of each kind of expense, or add a new one from the pre-designed database. In the Sort option, you can long-press the items to sort them.
 
-Other features include backup data to the SD card and restore as well. Also, users can log in with multiple ways, like Google account, Facebook, email or as a guest. The libraries used in this app is listed in the Open source license tab.
+Other features include backup data to the SD card and restore as well. Also, users can log in with multiple ways, like Google account, Facebook, email or as a guest. 
 
 Discover more when you use it!
 
 
 ## Architecture and technology
 
-Architecture is from Google [Architecture Components](https://developer.android.com/jetpack/docs/guide)，including Lifecycle、LiveData 和 ViewModel. The database is using [Room](https://developer.android.com/topic/libraries/architecture/room).
+Architecture is from Google [Architecture Components](https://developer.android.com/jetpack/docs/guide)，including Lifecycle、LiveData and ViewModel. The database is using [Room](https://developer.android.com/topic/libraries/architecture/room).
 
 Room and RxJava are really convenient to use together.
 
